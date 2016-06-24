@@ -1,4 +1,4 @@
-'use strict';
+
 const PORT = 1338;
 
 const Datastore = require('nedb');
