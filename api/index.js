@@ -26,7 +26,12 @@ function generateAPI(finderSrv, commentsSrv){
       .catch(THROW(res));
   }
   function find(req, res){
-
+    finderSrv.find(req.params.id)
+      .then(band => {
+        if(!band) return res.send(404);
+        return res.json(band);
+      })
+      .catch(THROW(res));
   }
 
   function findComments(req, res){
@@ -42,5 +47,6 @@ module.exports = {
   bandsRoutes(db, commentsSrv){
     return generateAPI(new BandsService(db, new AlbumsService(db)), commentsSrv);
   },
+
   commentsRoutes: require('./comments')
 };

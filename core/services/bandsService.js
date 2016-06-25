@@ -48,11 +48,13 @@ class BandsService {
   find(_id) {
     return new Promise((resolve, reject) => {
       this.db.findOne({docType: BAND, _id}, (err, band) => {
-        // TODO: Usar albumService.findByBand y buscar en la base de datos los artistas de la banda.
+        if (err) return reject(err);
 
-      //this.albumsService.findByBand(_id);
-
-    });
+        let total = band.length;
+        let current = 0;
+        if (0 === total) return resolve(null);
+        resolve(band);
+      });
     });
   }
 }
