@@ -11,8 +11,7 @@ const commentsSrv = require('./core/services/comments');
 
 const db = new Datastore({
   filename: 'datastore/workshop.db',
-  autoload: true,
-  timestampData: true
+  autoload: true
 });
 
 const app = express();
