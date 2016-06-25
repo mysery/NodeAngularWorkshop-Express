@@ -21,3 +21,16 @@ Abri tu browser y navega: `http://localhost:3000`
 Ante algun problema: cristian.bietti @ globant dot com
 
 Enjoy!
+
+
+repo Jesus:
+https://github.com/jegutierrez/NodeAngularWorkshop-Express
+
+repo juan:
+https://github.com/juanblasco/NodeAngularWorkshop-Angular
+
+repo martin:
+https://github.com/newearthmartin/NodeAngularWorkshop-Angular
+
+repo rodrigo:
+https://github.com/mysery/NodeAngularWorkshop-Express
