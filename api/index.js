@@ -1,35 +1,46 @@
 'use strict';
-module.exports = {
-  albumsRoutes(){
-    const router = require('express').Router();
+const AlbumsService = require('../core/services/albumsService');
+const BandsService = require('../core/services/bandsService');
 
-    router.get('/', findAll);
+const THROW = require('../utils/throwError');
+const Types = require('../core/types/documentTypes');
 
-    router.get('/:id', find);
+function generateAPI(finderSrv, commentsSrv){
+  const router = require('express').Router();
 
-    router.get('/:id/comments', findComments);
+  router.get('/', findAll);
 
-    router.post('/:id', insertComment(data));
+  router.get('/:id', find);
 
-    return router;
+  router.get('/:id/comments', findComments);
 
-    function findAll(req, res){
-      // Complete this function
-      res.json({ message: 'Your response goes here!' })
-    }
+  return router;
 
-    function find(req, res){
-      // Complete this function
-      res.json({ message: 'Your response goes here!' })
-    }
+  function findAll(req, res){
+    finderSrv.findAll()
+      .then(docs => {
+        if(!docs) return res.send(404);
 
-    function findComments(req, res){
-      // Complete this function
-      res.json({ message: 'Your response goes here!' })
-    }
-
-    function insertComment(req, res){
-      res.json({ message: 'Your response goes here!' })
-    }
+        return res.json(docs);
+      })
+      .catch(THROW(res));
   }
+  function find(req, res){
+
+  }
+
+  function findComments(req, res){
+  }
+}
+
+
+module.exports = {
+  albumsRoutes(db, commentsSrv){
+    return generateAPI(new AlbumsService(db), commentsSrv);
+  },
+
+  bandsRoutes(db, commentsSrv){
+    return generateAPI(new BandsService(db, new AlbumsService(db)), commentsSrv);
+  },
+  commentsRoutes: require('./comments')
 };
