@@ -25,10 +25,20 @@ build/Release
 
 # Dependency directory
 node_modules
-.idea
 
 # Optional npm cache directory
 .npm
 
 # Optional REPL history
 .node_repl_history
+
+
+
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+tmp
+dist/
