@@ -50,7 +50,9 @@ class BandsService {
       this.db.findOne({docType: BAND, _id}, (err, band) => {
         // TODO: Usar albumService.findByBand y buscar en la base de datos los artistas de la banda.
 
-      });
+      //this.albumsService.findByBand(_id);
+
+    });
     });
   }
 }
