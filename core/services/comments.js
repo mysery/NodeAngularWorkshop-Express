@@ -2,7 +2,7 @@
 
 
 
-class CommentsService{
+class CommentsService {
 
 
   find(parentKey){
@@ -10,7 +10,7 @@ class CommentsService{
   }
 
   insert(parentKey, message){
-    
+
   }
 }
 

@@ -7,7 +7,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const api = require('./api');
-const commentsSrv = require('./api');
+const commentsSrv = require('./core/services/comments');
 
 const db = new Datastore({
   filename: 'datastore/workshop.db',
