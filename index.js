@@ -20,10 +20,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/bands', api.bandsRoutes(db, commentsSrv));
-app.use('/albums', api.albumsRoutes(db, commentsSrv));
-app.use('/tracks', api.tracksRoutes(db, commentsSrv));
-app.use('/artists', api.artistsRoutes(db, commentsSrv));
-app.use('/comments', api.commentsRoutes(commentsSrv));
+app.use('/bands', api.bandsRoutes(db, new commentsSrv(db)));
+app.use('/albums', api.albumsRoutes(db, new commentsSrv(db)));
+app.use('/tracks', api.tracksRoutes(db, new commentsSrv(db)));
+app.use('/artists', api.artistsRoutes(db, new commentsSrv(db)));
+app.use('/comments', api.commentsRoutes(new commentsSrv(db)));
 
 app.listen(PORT, () => console.log(`App started and listening on port ${PORT}`));
