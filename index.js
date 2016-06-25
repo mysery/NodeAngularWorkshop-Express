@@ -7,8 +7,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const api = require('./api');
+const commentsSrv = require('./api');
 
-// TODO: Usar 'datastore/workshop.db' para levantar la base de datos.
+const db = new Datastore({
+  filename: 'datastore/workshop.db',
+  autoload: true,
+  timestampData: true
+});
 
 const app = express();
 
