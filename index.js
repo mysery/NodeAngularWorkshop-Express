@@ -7,6 +7,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const api = require('./api');
+const albumsApi = require('./api/albums')
 const commentsSrv = require('./core/services/comments');
 
 const db = new Datastore({

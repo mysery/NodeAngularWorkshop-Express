@@ -3,7 +3,7 @@ const AlbumsService = require('../core/services/albumsService');
 const BandsService = require('../core/services/bandsService');
 const TrackService = require('../core/services/trackService');
 const ArtistService = require('../core/services/artistService');
-const CommentsRoute = require('./comments')
+const CommentsRoute = require('./comments');
 
 const THROW = require('../utils/throwError');
 const Types = require('../core/types/documentTypes');
@@ -30,11 +30,9 @@ function generateAPI(finderSrv, commentsSrv){
   }
   function find(req, res){
     finderSrv.find(req.params.id)
-      .then(docs => {
-        if(!docs) return res.send(404);
-
-        return res.json(docs);
-
+      .then(band => {
+        if(!band) return res.send(404);
+        return res.json(band);
       })
       .catch(THROW(res));
   }
@@ -43,13 +41,12 @@ function generateAPI(finderSrv, commentsSrv){
     commentsSrv.findByTrack(req.params.id)
       .then(docs => {
         if(!docs) return res.send(404);
-
         return res.json(docs);
-      })
-      .catch(THROW(res));
+        })
+        .catch(THROW(res));
   }
-
 }
+
 
 module.exports = {
   albumsRoutes(db, commentsSrv){

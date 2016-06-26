@@ -87,10 +87,10 @@
 {"docType":"COMMENT","ts":{"$$date":1466894009285},"_id":"sSScYFKDiT7W9wf2"}
 {"url":"https://i.scdn.co/image/96e2e59a1bf0b90cce97035ca48ad017cb9937c9","firstName":"Paul","lastName":"McCartney","birthdate":"1942-06-18T00:00:00-0300","instrument":"guitar","docType":"ARTIST","_id":"sgjlfX50qTFVAWzS","createdAt":{"$$date":1466829904717},"updatedAt":{"$$date":1466829904717}}
 {"docType":"COMMENT","ts":{"$$date":1466893901353},"_id":"tOoGwB8exHjurHAb"}
+{"docType":"COMMENT","parentKey":"iawScZTOKmHTCQFr","message":"whoa","ts":{"$$date":1466894285058},"_id":"uNZ6H2EwliMmR5YT"}
 {"disc_number":1,"duration_ms":208466,"name":"Lucy In The Sky With Diamonds - Remastered","track_number":3,"docType":"TRACK","_id":"vU2pTnwblkiiQTv1","createdAt":{"$$date":1466829904729},"updatedAt":{"$$date":1466829904729}}
 {"disc_number":1,"duration_ms":121373,"name":"The Ecstasy of Gold","track_number":1,"docType":"TRACK","_id":"vvN2azLL4DxvEC5c","createdAt":{"$$date":1466829904731},"updatedAt":{"$$date":1466829904731}}
 {"disc_number":1,"duration_ms":395960,"name":"The Shortest Straw","track_number":5,"docType":"TRACK","_id":"xFwdkbqkGCfKvNBl","createdAt":{"$$date":1466829904730},"updatedAt":{"$$date":1466829904730}}
 {"disc_number":1,"duration_ms":447440,"name":"One","track_number":4,"docType":"TRACK","_id":"yFBbnJrlutJjLtjO","createdAt":{"$$date":1466829904730},"updatedAt":{"$$date":1466829904730}}
 {"docType":"COMMENT","ts":{"$$date":1466894233117},"_id":"yuFKNaf7AzRokPtB"}
 {"url":"https://i.scdn.co/image/eee785cb06a3cf1d0024392fb9369f833670e385","releaseDate":"1963-03-22T00:00:00-0300","name":"Garage, Inc.","docType":"ALBUM","_id":"zlPujB72lOFYSipL","createdAt":{"$$date":1466829904724},"updatedAt":{"$$date":1466829904736},"tracks":["7yRH8TlU4nUXsCQU","FeCQnFsYdB5uP9Vv","2ZO2OhxikAOOGHFS","NKmQTLtVBBZmKf38"]}
-{"docType":"COMMENT","parentKey":"iawScZTOKmHTCQFr","message":"whoa","ts":{"$$date":1466894285058},"_id":"uNZ6H2EwliMmR5YT"}
