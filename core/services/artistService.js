@@ -25,10 +25,10 @@ class BandsService {
         bands.forEach((band, i) => {
           band.artists.forEach((artist, i) => {
             artistsList[i] = artist;
-          }
-          if(total === ++current) {
-            resolve(artistsList);
-          }
+            if(total === ++current) {
+              resolve(artistsList);
+            }
+          });
         });
       });
     });
@@ -45,10 +45,10 @@ class BandsService {
         let albumsList = [];
         band.artists.forEach((artist, i) => {
           artistsList[i] = artist;
-        }
-        if(total === ++current) {
-          resolve(artistsList);
-        }
+          if(total === ++current) {
+            resolve(artistsList);
+          }
+        });
       });
     });
   }
