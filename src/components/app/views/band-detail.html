@@ -2,18 +2,14 @@
     <h1>{{$resolve.data.name}}</h1>
 
     <h2>Artists</h2>
-    <!--  -->
-    <!-- ARTISTS LIST -->
-    <!--  -->
-    <hr />
+    <horizontal-list type="artist" data="$resolve.artists"></horizontal-list>
 
+    <hr/>
 
     <h2>Albums</h2>
-    <!--  -->
-    <!-- ALBUNS LIST -->
-    <!--  -->
-    <hr />
+    <horizontal-list type="album" data="$resolve.albums"></horizontal-list>
 
+    <hr/>
 
     <div class="tracks">
         <h2>Tracks in {{ album }}</h2>

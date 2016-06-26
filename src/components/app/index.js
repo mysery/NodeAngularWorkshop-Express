@@ -1,4 +1,4 @@
-import {EmptyListComponent} from './empty-list-component';
+import {HorizontalListComponent} from './horizontal-list-component';
 import {CommentsComponent} from './comments';
 import {PaginationComponent} from './pagination';
 import {TableListComponent} from './table-list';
@@ -11,6 +11,6 @@ angular.module('App', ['ngRoute'])
     .config(routes)
     .service('ApiService', ApiService)
     .component('tableList', TableListComponent)
-    .component('emptyListComponent', EmptyListComponent)
+    .component('horizontalList', HorizontalListComponent)
     .component('comments', CommentsComponent)
     .component('pagination', PaginationComponent);

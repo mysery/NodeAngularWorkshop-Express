@@ -1,9 +1,5 @@
 import 'angular-route';
 
-import {bands} from './services/mock-data';
-
-
-
 export function routes($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({
         enabled: true,
@@ -16,26 +12,26 @@ export function routes($routeProvider, $locationProvider) {
         .when('/', {
             templateUrl: '/components/app/views/index.html',
             resolve: {
-                // use resolve to to pass data to the template under $resolve
-                data: () => new Promise(resolve => resolve(bands)), // mock data
+                data: ApiService => ApiService.getBands()
             },
         })
         .when('/band/:bandId/', {
             templateUrl: '/components/app/views/band-detail.html',
             resolve: {
-                // use resolve to to pass data to the template under $resolve
+                artists: (ApiService, $route) => ApiService.getArtists($route.current.params.bandId),
+                albums: (ApiService, $route) => ApiService.getAlbums($route.current.params.bandId)
             },
         })
         .when('/band/:bandId/album/:albumId/', {
             templateUrl: '/components/app/views/band-detail.html',
             resolve: {
-                // use resolve to to pass data to the template under $resolve
+                tracks: (ApiService, $route) => ApiService.getTracks($route.current.params.albumId)
             },
         })
         .when('/band/:bandId/album/:albumId/track/:trackId/', {
             templateUrl: '/components/app/views/band-detail.html',
             resolve: {
-                // use resolve to to pass data to the template under $resolve
+                comments: (ApiService, $route) => new ApiService.getComments($route.current.params.trackId)
             },
         });
 }
