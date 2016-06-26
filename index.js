@@ -26,4 +26,5 @@ app.use('/tracks', api.tracksRoutes(db, new commentsSrv(db)));
 app.use('/artists', api.artistsRoutes(db, new commentsSrv(db)));
 app.use('/comments', api.commentsRoutes(new commentsSrv(db)));
 
+
 app.listen(PORT, () => console.log(`App started and listening on port ${PORT}`));

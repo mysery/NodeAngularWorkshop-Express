@@ -37,12 +37,11 @@ class BandsService {
               if (err) return reject(err);
 
               albumsList[i] = album;
-
-              if(total === ++current) {
-                resolve(albumsList);
-              }
             });
           });
+          if(total === ++current) {
+            resolve(albumsList);
+          }
         });
       });
     });
